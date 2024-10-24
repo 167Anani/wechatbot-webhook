@@ -1,5 +1,5 @@
 const path = require('path')
-const { PORT } = process.env
+const { PORT, APP_URL } = process.env
 
 const config = {
   /**
@@ -8,7 +8,7 @@ const config = {
    */
   roomCachedTime: 1000 * 60 * 5,
   /** 服务启动地址 */
-  localUrl: `http://localhost:${PORT}`
+  localUrl: APP_URL || `http://localhost:${PORT}`
 }
 
 const { homeEnvCfg, homeMemoryCardPath } = process.env
